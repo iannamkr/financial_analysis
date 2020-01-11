@@ -1,0 +1,69 @@
+appName: financialAnalysis
+logLevel: WARN
+
+file:
+  tickerSymbols: resources/tickerSymbols/tickerSymbols.txt
+
+# tickers
+  fetchedTicker: resources/fetched/ticker
+  processedTicker: resources/processed/ticker
+
+# TODO: financials
+#  financials: https://finance.yahoo.com/quote/{}/financials?p={}
+#  balance: https://finance.yahoo.com/quote/{}/balance-sheet?p={}
+#  cashflow: https://finance.yahoo.com/quote/{}/cash-flow?p={}
+#  fetchedFianance: resources/fetched/fianance/{}/{}
+#  processedFianance: resources/processed/fianance/{}/{}
+
+# TODO: analyze
+#  model: resources/model
+
+stock:
+  period:
+    start: "2010-01-01"
+    end: "2019-12-30"
+  header: "open, close, high, low, volumn, amount"
+  features:
+    Volumn_Delta: "volume_delta"
+    Open_+2days: "open_2_d"
+    Open_-2days: "open_2_d"
+    CR_1days: "cr-ma"
+    CR_5days: "cr-ma1"
+    CR_10days: "cr-ma2"
+    CR_20days: "cr-ma3"
+    Volumn_Max: "volume_-32-1_max"
+    Volumn_Min: "volume_-3~1_min"
+
+    # Stochastic oscillator
+    KDJK: "kdjk"
+    KDJD: "kdjd"
+    KDJJ: "kdjj"
+
+    # three days KDJK cross up 3 days KDJD
+    KDJK_Cross_3days_KDJD: "kdj_3_xu_kdjd_3"
+
+    # 2 days simple moving average on open price
+    Open_+2sma: "open_2_sma"
+
+    # MACD MACD signal line MACD histogram
+    MACD: "macd"
+    MACDS: "macds"
+    MACDH: "macdh"
+
+    # Bolliger uppser & lower band
+    Bolliger: "boll"
+    BolligerUpper: "boll_ub"
+    BolligerLower: "boll_lb"
+
+    # relative strength index
+    RSI_6days: "rsi_6"
+    RSI_12days: "rsi_12"
+
+    # Williams Overbought/Oversold index
+    WR_10days: "wr_10"
+    WR_6days: "wr_6"
+
+    # DMA difference of 10 and 50 moving average
+    DMA: "dma"
+
+

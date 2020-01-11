@@ -1,1 +1,1 @@
-# financial_statements_parser
+# financial analysis
