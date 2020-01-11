@@ -15,9 +15,6 @@ file:
 #  fetchedFianance: resources/fetched/fianance/{}/{}
 #  processedFianance: resources/processed/fianance/{}/{}
 
-# TODO: analyze
-#  model: resources/model
-
 stock:
   period:
     start: "2010-01-01"

@@ -12,12 +12,12 @@ if __name__ == '__main__':
     config = Config()
 
     f = open(config.tickerSymbols, encoding='utf-8')
-    tickers = f.read().splitlines()
+    symbols = f.read().splitlines()
 
     yahooFinanceFetcher = YahooFinanceFetcher(config)
 
-    fetched_tickers = yahooFinanceFetcher.fetch(tickers[0])
-    fetched_tickers.to_csv(config.fetchedTicker + '/' + tickers[0] + ".csv")
+    fetched_tickers = yahooFinanceFetcher.fetch(symbols[0])
+    fetched_tickers.to_csv(config.fetchedTicker + '/' + symbols[0] + ".csv")
 
 
 
