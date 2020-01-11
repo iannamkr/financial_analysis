@@ -4,6 +4,7 @@ import confuse
 class Config(object):
     def __init__(self):
         config = confuse.Configuration('FinancialAnalysis', __name__)
+        self.stock = config['stock']
         self.start = config['stock']['period']['start'].get()
         self.end = config['stock']['period']['end'].get()
         self.tickerSymbols = config['file']['tickerSymbols'].get()

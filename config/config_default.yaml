@@ -24,20 +24,14 @@ stock:
     Volumn_Delta: "volume_delta"
     Open_+2days: "open_2_d"
     Open_-2days: "open_2_d"
-    CR_1days: "cr-ma"
     CR_5days: "cr-ma1"
     CR_10days: "cr-ma2"
     CR_20days: "cr-ma3"
-    Volumn_Max: "volume_-32-1_max"
-    Volumn_Min: "volume_-3~1_min"
 
     # Stochastic oscillator
     KDJK: "kdjk"
     KDJD: "kdjd"
     KDJJ: "kdjj"
-
-    # three days KDJK cross up 3 days KDJD
-    KDJK_Cross_3days_KDJD: "kdj_3_xu_kdjd_3"
 
     # 2 days simple moving average on open price
     Open_+2sma: "open_2_sma"
