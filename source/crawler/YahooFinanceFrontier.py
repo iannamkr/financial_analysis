@@ -7,7 +7,7 @@ class YahooFinanceFrontier(AbstractFrontier):
         self.symbols = symbols
         self.urls = self.init_urls(symbols)
         self.robots = self.init_robots(symbols)
-        self.pool_size = 5 if len(symbols) > 5 else len(symbols)
+        self.pool_size = config.pool_size if len(symbols) > config.pool_size else len(symbols)
 
     def init_urls(self, symbols):
         urls = {}
