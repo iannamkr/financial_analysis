@@ -63,10 +63,3 @@ if __name__ == '__main__':
     crawling_financials(['IBM', 'GOOG', 'MSFT', 'AAPL', 'INTC'])
 
     make_technical_analysis_portfolio(['IBM', 'GOOG', 'MSFT', 'AAPL', 'INTC'])
-
-
-
-
-
-
-

@@ -34,16 +34,3 @@ class YahooFinanceFrontier(AbstractFrontier):
 
     def get_robots(self):
         return self.robots
-
-
-
-
-
-
-
-
-
-
-
-
-
