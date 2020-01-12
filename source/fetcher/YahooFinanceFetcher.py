@@ -1,4 +1,4 @@
-from fetcher.abstract.fetcher import AbstractFetcher
+from abstract.fetcher import AbstractFetcher
 from pandas_datareader import data
 
 
@@ -7,11 +7,11 @@ class YahooFinanceFetcher(AbstractFetcher):
         self.config = config
 
     def fetch_all(self, symbols):
-        stocks = []
-        [stocks.append(self.fetch(symbol)) for symbol in symbols]
+        stocks = {}
+        for symbol in symbols:
+            stocks[symbol] = self.fetch(symbol)
         return stocks
 
-    def fetch(self, symbol, save=True):
+    def fetch(self, symbol):
         stock = data.get_data_yahoo(symbol, self.config.start, self.config.end)
-        stock.to_csv(self.config.fetchedTicker + '/' + symbol)
         return stock

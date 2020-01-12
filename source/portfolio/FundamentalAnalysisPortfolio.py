@@ -1,16 +1,18 @@
+from abstract.portfolio import AbstractPortfolio
+
 import pandas as pd
 
-from loader import Loader
+from utils import FileUtils
 from stockstats import StockDataFrame as Sdf
 
 
-class Portfolio(object):
+class FundamentalAnalysisPortfolio(AbstractPortfolio):
     def __init__(self, config, symbols):
         self.config = config
         self.symbols = symbols
         self.stocks = {}
 
-        loader = Loader(config)
+        loader = FileUtils(config)
         for symbol in symbols:
             f = loader.get_file(config.fetchedTicker, symbol)
             self.stocks[symbol] = (Sdf.retype(pd.read_csv(f)))

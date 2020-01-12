@@ -1,19 +1,21 @@
 appName: financialAnalysis
 logLevel: WARN
 
+system:
+  poolSize: 5
+
 file:
   tickerSymbols: resources/tickerSymbols/tickerSymbols.txt
 
 # tickers
-  fetchedTicker: resources/fetched/ticker
-  processedTicker: resources/processed/ticker
+  fetchedTicker: resources\\fetched\\ticker
+  crawledFinancials: resources\\crawled\\financials
 
-# TODO: financials
-#  financials: https://finance.yahoo.com/quote/{}/financials?p={}
-#  balance: https://finance.yahoo.com/quote/{}/balance-sheet?p={}
-#  cashflow: https://finance.yahoo.com/quote/{}/cash-flow?p={}
-#  fetchedFianance: resources/fetched/fianance/{}/{}
-#  processedFianance: resources/processed/fianance/{}/{}
+  processedTicker: resources\\processed\\ticker
+  processedFinancials: resources\\processed\\financials
+
+url:
+  financials: https://finance.yahoo.com/quote/{0}/financials?p={0}
 
 stock:
   period:

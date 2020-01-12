@@ -1,7 +1,7 @@
 import os
 
 
-class Loader(object):
+class FileUtils(object):
     def __init__(self, config):
         self.config = config
 
@@ -13,3 +13,10 @@ class Loader(object):
         f = open(self.config.tickerSymbols, encoding='utf-8')
         symbols = f.read().splitlines()
         return symbols
+
+    @staticmethod
+    def save_file(df, dir, symbol):
+        os.makedirs(dir,  exist_ok=True)
+        path = os.path.join(dir, symbol)
+        df.to_csv(path, mode='w')
+
